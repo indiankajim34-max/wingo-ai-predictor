@@ -1,0 +1,13 @@
+{
+  "name": "wingo-ai-predictor",
+  "version": "1.0.0",
+  "description": "Lightweight Wingo Predictor Tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.6.8"
+  }
+}
