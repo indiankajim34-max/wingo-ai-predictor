@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wingo AI Predictor - VIP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0d0f12; color: #fbbf24; font-family: monospace; }
+        .glass-card { background: rgba(20, 24, 33, 0.85); border: 1px solid rgba(251, 191, 36, 0.3); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="p-4 flex flex-col items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md glass-card rounded-2xl p-4 shadow-2xl space-y-4">
+        <!-- Header -->
+        <div class="flex justify-between items-center border-b border-yellow-500/20 pb-3">
+            <div>
+                <span class="text-xs bg-yellow-500/20 px-2 py-1 rounded text-yellow-400 font-bold">👑 KING VIP</span>
+                <h1 class="text-lg font-extrabold tracking-wider mt-1 text-white">ZIGZAG ENGINE</h1>
+            </div>
+            <div class="text-right">
+                <span class="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-xs text-green-400 font-bold ml-1">LIVE</span>
+                <p class="text-xs text-gray-400 mt-1">PING: <span id="ping" class="text-white">31 ms</span></p>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-4 gap-2 text-center text-xs">
+            <div class="glass-card p-2 rounded-xl"><p class="text-gray-400">TOTAL</p><p class="text-white font-bold text-sm">15</p></div>
+            <div class="glass-card p-2 rounded-xl"><p class="text-green-400">WIN</p><p class="text-white font-bold text-sm">13</p></div>
+            <div class="glass-card p-2 rounded-xl"><p class="text-red-400">LOSS</p><p class="text-white font-bold text-sm">2</p></div>
+            <div class="glass-card p-2 rounded-xl"><p class="text-yellow-400">JACKPOT</p><p class="text-white font-bold text-sm">2</p></div>
+        </div>
+
+        <!-- Period & Timer -->
+        <div class="glass-card p-3 rounded-xl flex justify-between items-center text-sm">
+            <div>
+                <p class="text-[10px] text-gray-400">CURRENT PERIOD</p>
+                <p id="period-id" class="text-white font-bold tracking-wider text-xs">20260916100010874</p>
+            </div>
+            <div class="text-right">
+                <p class="text-[10px] text-gray-400">NEXT SIGNAL IN</p>
+                <p id="timer" class="text-yellow-400 font-extrabold text-base">00:47</p>
+            </div>
+        </div>
+
+        <!-- Loss Guard Badge -->
+        <div class="bg-yellow-500/10 border border-yellow-500/30 text-center py-1.5 rounded-lg text-xs text-yellow-300 font-semibold">
+            🛡️ KING BHAI LOSS GUARD ACTIVE
+        </div>
+
+        <!-- Radar & Prediction Display -->
+        <div class="glass-card p-6 rounded-2xl text-center relative overflow-hidden flex flex-col items-center justify-center h-44 border-yellow-500/40">
+            <div class="absolute inset-0 flex items-center justify-center opacity-10">
+                <div class="w-36 h-36 border-2 border-dashed border-yellow-400 rounded-full animate-spin"></div>
+            </div>
+            <p class="text-xs text-gray-400 tracking-widest mb-1">ANALYZING 100+ HISTORIES</p>
+            <h2 id="signal-text" class="text-4xl font-black text-yellow-400 tracking-widest drop-shadow-[0_0_15px_rgba(251,191,36,0.6)]">SMALL</h2>
+            <p class="text-[10px] text-gray-400 mt-2">LOSS GUARD (🔵 ZIGZAG) ➔ REVERSE</p>
+        </div>
+
+        <!-- Footer Navigation Tabs -->
+        <div class="grid grid-cols-4 text-center pt-2 border-t border-yellow-500/20 text-xs text-gray-400">
+            <div class="text-yellow-400 font-bold">⚡ TERMINAL</div>
+            <div>📜 LOG</div>
+            <div>📊 STATS</div>
+            <div>👤 VIP</div>
+        </div>
+    </div>
+
+</body>
+</html>
